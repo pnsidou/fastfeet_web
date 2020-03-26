@@ -2,9 +2,8 @@
   "configurations": [
     {
       "name": "fastfeet_backend",
-      "type": "node",
-      "program": "nodemon -r sucrase/register",
-      "args": "src/server.js"
+      "type": "chrome",
+      "url": "http://localhost:3000/"
     }
   ]
 }

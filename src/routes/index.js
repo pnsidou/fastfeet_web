@@ -1,5 +1,7 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+
+import Route from './Route';
 
 import SignIn from '~/pages/SignIn';
 import Recipients from '~/pages/Recipients';
@@ -17,16 +19,40 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={SignIn} />
-      <Route path="/recipients" component={Recipients} />
-      <Route path="/recipients/register" component={RegisterRecipient} />
-      <Route path="/recipients/:id/update" component={UpdateRecipient} />
-      <Route path="/deliveries" component={Deliveries} />
-      <Route path="/deliveries/register" component={RegisterDelivery} />
-      <Route path="/deliveries/:id/update" component={UpdateDelivery} />
-      <Route path="/deliverymen" component={Deliverymen} />
-      <Route path="/deliverymen/register" component={RegisterDeliveryman} />
-      <Route path="/deliverymen/:id/update" component={UpdateDeliveryman} />
-      <Route path="/problems" component={Problems} />
+      <Route path="/recipients" exact isPrivate component={Recipients} />
+      <Route
+        path="/recipients/register"
+        isPrivate
+        component={RegisterRecipient}
+      />
+      <Route
+        path="/recipients/:id/update"
+        isPrivate
+        component={UpdateRecipient}
+      />
+      <Route path="/deliveries" exact isPrivate component={Deliveries} />
+      <Route
+        path="/deliveries/register"
+        isPrivate
+        component={RegisterDelivery}
+      />
+      <Route
+        path="/deliveries/:id/update"
+        isPrivate
+        component={UpdateDelivery}
+      />
+      <Route path="/deliverymen" exact isPrivate component={Deliverymen} />
+      <Route
+        path="/deliverymen/register"
+        isPrivate
+        component={RegisterDeliveryman}
+      />
+      <Route
+        path="/deliverymen/:id/update"
+        isPrivate
+        component={UpdateDeliveryman}
+      />
+      <Route path="/problems" isPrivate component={Problems} />
     </Switch>
   );
 }

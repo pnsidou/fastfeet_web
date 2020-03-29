@@ -19,12 +19,13 @@ export function* signIn({ payload }) {
 
     history.push('/deliveries');
   } catch (err) {
+    console.tron.log(err);
     yield put(signFailure());
     toast.error('Unable to login. Verify your email and password');
   }
 }
 
-function setToken({ payload }) {
+export function setToken({ payload }) {
   if (!payload) return;
 
   const { token } = payload.auth;

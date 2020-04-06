@@ -2,8 +2,10 @@ import React from 'react';
 
 import '~/config/ReactotronConfig';
 
+import Routes from './routes';
+
 function App() {
-  return <div></div>;
+  return <Routes />;
 }
 
 export default App;

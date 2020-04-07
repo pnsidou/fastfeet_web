@@ -17,3 +17,22 @@ export function listDeliveriesFailure() {
     type: '@deliveries/LIST_FAILURE',
   };
 }
+
+export function deleteDelivery(id) {
+  return {
+    type: '@deliveries/DELETE_REQUEST',
+    payload: id,
+  };
+}
+
+export function deleteDeliverySuccess() {
+  return {
+    type: '@deliveries/DELETE_SUCCESS',
+  };
+}
+
+export function deleteDeliveryFailure() {
+  return {
+    type: '@deliveries/DELETE_FAILURE',
+  };
+}

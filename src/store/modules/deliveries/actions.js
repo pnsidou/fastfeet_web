@@ -18,10 +18,29 @@ export function listDeliveriesFailure() {
   };
 }
 
+export function registerDelivery(data) {
+  return {
+    type: '@deliveries/REGISTER_REQUEST',
+    payload: data,
+  };
+}
+
+export function registerDeliverySuccess() {
+  return {
+    type: '@deliveries/REGISTER_SUCCESS',
+  };
+}
+
+export function registerDeliveryFailure() {
+  return {
+    type: '@deliveries/REGISTER_FAILURE',
+  };
+}
+
 export function deleteDelivery(id) {
   return {
     type: '@deliveries/DELETE_REQUEST',
-    payload: id,
+    payload: { id },
   };
 }
 
@@ -34,5 +53,24 @@ export function deleteDeliverySuccess() {
 export function deleteDeliveryFailure() {
   return {
     type: '@deliveries/DELETE_FAILURE',
+  };
+}
+
+export function updateDelivery(id, data) {
+  return {
+    type: '@deliveries/UPDATE_REQUEST',
+    payload: { id, data },
+  };
+}
+
+export function updateDeliverySuccess() {
+  return {
+    type: '@deliveries/UPDATE_SUCCESS',
+  };
+}
+
+export function updateDeliveryFailure() {
+  return {
+    type: '@deliveries/UPDATE_FAILURE',
   };
 }

@@ -59,12 +59,15 @@ function Deliveries() {
     dispatch(listDeliveries(query));
   };
 
-  useEffect(() => dispatch(listDeliveries()), [dispatch]);
+  useEffect(() => {
+    dispatch(listDeliveries());
+  }, [dispatch]);
 
   return (
     <TableFrame
       title="Deliveries"
-      searchPlaceholder="Search deliveries by product name..."
+      searchPl
+      placeholder="Search deliveries by product name..."
       handleSearch={handleSearch}
       registerButtonHandler={() => history.push('/deliveries/register')}
     >

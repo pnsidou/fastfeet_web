@@ -6,7 +6,7 @@ function Avatar({ name, url, color }) {
   if (url)
     return (
       <StyledAvatar>
-        <img src={url} />
+        <img src={url} alt="" />
       </StyledAvatar>
     );
 

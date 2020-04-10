@@ -19,6 +19,7 @@ function ActionsMenu({ actions }) {
           <MdMoreHoriz size={20} />
         </StyledTrigger>
       )}
+      on="hover"
       closeOnDocumentClick={true}
       contentStyle={{ width: 100 }}
     >

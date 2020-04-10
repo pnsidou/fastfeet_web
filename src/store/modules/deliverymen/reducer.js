@@ -16,16 +16,20 @@ export default function deliverymen(state = INITIAL_STATE, action) {
           const color =
             avatarColors[Math.floor(Math.random() * avatarColors.length)];
 
-          const avatar = (
+          const avatarComponent = (
             <Avatar
               name={deliveryman.name}
-              url={deliveryman.avatar}
+              url={deliveryman.avatar && deliveryman.avatar.url}
               color={color}
             />
           );
 
-          return { ...deliveryman, avatar };
+          return {
+            ...deliveryman,
+            avatar: { ...deliveryman.avatar, component: avatarComponent },
+          };
         });
+
         draft.list = deliverymen;
         break;
       }

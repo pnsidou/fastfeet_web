@@ -14,7 +14,4 @@ export function* listProblems({ payload }) {
   }
 }
 
-export default all([
-  takeLatest('@problems/LIST_REQUEST', listProblems),
-  takeLatest('@deliveries/LIST_REQUEST', listProblems),
-]);
+export default all([takeLatest('@problems/LIST_REQUEST', listProblems)]);

@@ -69,7 +69,7 @@ export const TopRightMenu = styled.span`
 export const CustomLink = styled(NavLink).attrs({
   activeClassName: 'selected',
   activeStyle: {
-    'font-weight': 'bold',
+    fontWeight: 'bold',
     color: 'black',
   },
 })`

@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { signOut } from '~/store/modules/auth/actions';
+
 import logo from '~/assets/fastfeet-logo.png';
+import { signOut } from '~/store/modules/auth/actions';
+import { listRecipients } from '~/store/modules/recipients/actions';
+import { listDeliverymen } from '~/store/modules/deliverymen/actions';
+import { listDeliveries } from '~/store/modules/deliveries/actions';
+import { listProblems } from '~/store/modules/problems/actions';
 
 import {
   Layout,
@@ -19,7 +24,14 @@ export default function DefaultLayout({ children }) {
   function handleSignOut() {
     dispatch(signOut());
   }
-  console.tron.log(user);
+
+  useEffect(() => {
+    dispatch(listRecipients());
+    dispatch(listDeliverymen());
+    dispatch(listDeliveries());
+    dispatch(listProblems());
+  }, []);
+
   return (
     <Layout>
       <Header>

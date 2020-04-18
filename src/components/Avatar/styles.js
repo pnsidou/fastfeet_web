@@ -10,7 +10,13 @@ export const StyledAvatar = styled.div.attrs({
   align-items: center;
   border-radius: 50%;
   font-weight: bold;
+  overflow: hidden;
   background: ${props => props.color};
   color: ${props => darken(0.3, props.color)};
   border: 1px solid ${props => darken(0.3, props.color)};
+
+  img {
+    height: 200%;
+    width: 200%;
+  }
 `;

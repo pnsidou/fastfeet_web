@@ -5,7 +5,7 @@ import { StyledAvatar } from './styles';
 function Avatar({ name, url, color }) {
   if (url)
     return (
-      <StyledAvatar>
+      <StyledAvatar color={'white'}>
         <img src={url} alt="" />
       </StyledAvatar>
     );

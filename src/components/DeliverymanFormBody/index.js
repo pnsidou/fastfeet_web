@@ -4,6 +4,8 @@ import * as Yup from 'yup';
 
 import { StyledBody } from './styles';
 
+import AvatarInput from '~/components/AvatarInput';
+
 export const schema = Yup.object().shape({
   name: Yup.string().required(),
   email: Yup.string()
@@ -13,6 +15,11 @@ export const schema = Yup.object().shape({
 
 export const deliverymanFormBody = (
   <StyledBody>
+    <div>
+      <div className="avatar">
+        <AvatarInput name="avatar"></AvatarInput>
+      </div>
+    </div>
     <div>
       <div className="name">
         <h3>Name</h3>

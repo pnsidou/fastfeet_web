@@ -66,7 +66,8 @@ export const RegisterButton = styled.button`
   color: white;
   background: #7159c1;
   padding: auto 5px;
-  border-radius: 3px;
+  border-radius: 4px;
+  border: none;
 
   h1 {
     font-size: 20px;

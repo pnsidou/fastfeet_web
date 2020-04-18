@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -16,16 +16,23 @@ function TableFrame({
   title,
   searchPlaceholder,
   registerButtonHandler,
+  handleSearch,
   children,
 }) {
+  const [query, setQuery] = useState(null);
+  console.tron.log(query);
   return (
     <Frame>
       <Title>{title}</Title>
       <SearchBar>
-        <SearchButton>
+        <SearchButton onClick={() => handleSearch(query)}>
           <SearchIcon />
         </SearchButton>
-        <SearchInput placeholder={searchPlaceholder} />
+        <SearchInput
+          placeholder={searchPlaceholder}
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+        />
       </SearchBar>
       <RegisterButton type="button" onClick={registerButtonHandler}>
         <h1>+</h1>

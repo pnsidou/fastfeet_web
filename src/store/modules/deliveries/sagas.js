@@ -17,9 +17,14 @@ import { deleteDeliverymenFailure } from '../deliverymen/actions';
 
 export function* listDeliveries({ payload }) {
   try {
-    const response = yield call(api.get, '/deliveries');
+    const { query } = payload;
+
+    const response = yield call(api.get, `/deliveries`, {
+      params: { q: query },
+    });
     yield put(listDeliveriesSuccess(response.data));
   } catch (err) {
+    console.tron.log('failure', err);
     yield put(listDeliveriesFailure());
   }
 }

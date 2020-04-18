@@ -1,7 +1,7 @@
 export function listDeliveries(query) {
   return {
     type: '@deliveries/LIST_REQUEST',
-    payload: query,
+    payload: { query },
   };
 }
 

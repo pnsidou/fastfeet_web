@@ -28,7 +28,6 @@ export default function AvatarInput() {
     data.append('file', chosen_file);
 
     const response = await api.post('files', data);
-
     const { id, url } = response.data;
 
     setFile(id);

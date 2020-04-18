@@ -66,8 +66,7 @@ function Deliveries() {
   return (
     <TableFrame
       title="Deliveries"
-      searchPl
-      placeholder="Search deliveries by product name..."
+      searchPlaceholder="Search deliveries by product name..."
       handleSearch={handleSearch}
       registerButtonHandler={() => history.push('/deliveries/register')}
     >

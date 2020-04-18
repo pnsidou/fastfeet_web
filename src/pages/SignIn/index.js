@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import { signInRequest } from '~/store/modules/auth/actions';
 
 import logo from '~/assets/fastfeet-logo.png';
-import { Background } from './styles';
+import { Container } from './styles';
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -25,7 +25,7 @@ function SignIn() {
   }
 
   return (
-    <Background>
+    <Container>
       <Form schema={schema} onSubmit={handleSubmit}>
         <img src={logo} alt="" />
         <h1>EMAIL</h1>
@@ -38,7 +38,7 @@ function SignIn() {
         />
         <button type="submit">Sign In</button>
       </Form>
-    </Background>
+    </Container>
   );
 }
 

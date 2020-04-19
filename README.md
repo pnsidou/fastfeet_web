@@ -1,3 +1,11 @@
+## Introduction
+
+This repository contains the web interface of Fastfeet, a fake transport app. The backend and the mobile app
+can be found at:
+
+- [mobile](https://github.com/pnsidou/fastfeet_mobile)
+- [backend](https://github.com/pnsidou/fastfeet_backend)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

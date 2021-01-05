@@ -14,7 +14,7 @@
     "@types/react-icons": "^3.0.0",
     "@types/react-input-mask": "^2.0.5",
     "@types/react-redux": "^7.1.7",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "immer": "^6.0.3",
     "polished": "^3.5.1",
